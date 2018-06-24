@@ -23,8 +23,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = '';
-
+if($_SERVER == 'localhost')
+	$config['base_url'] = 'http://localhost/codeigniter-config/';
+else
+	$config['base_url'] = '';
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -35,7 +37,7 @@ $config['base_url'] = '';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
